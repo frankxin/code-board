@@ -1,0 +1,105 @@
+/* line 3, ../sass/my.scss */
+.round {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 9, ../sass/my.scss */
+#footer {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  color: #f4f4f4;
+  background-color: #272727;
+  min-width: 1024px;
+}
+/* line 17, ../sass/my.scss */
+#footer .footer-main {
+  width: 100%;
+  background-color: #272727;
+  height: 240px;
+  color: #D4D4D4;
+}
+
+/* line 24, ../sass/my.scss */
+.footer-wrap {
+  width: 1024px;
+  margin: auto;
+}
+
+/* line 28, ../sass/my.scss */
+.container1 {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  position: relative;
+  top: 78px;
+}
+
+/* line 33, ../sass/my.scss */
+.container2 {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 34, ../sass/my.scss */
+.container2 p {
+  font-size: 28px;
+  color: #fff;
+}
+
+/* line 41, ../sass/my.scss */
+.w2 s {
+  display: block;
+  background-image: url(../img/headerfooterIcon.png);
+  background-position: 0 -703px;
+  width: 147px;
+  height: 41px;
+  margin: 0 auto;
+}
+
+/* line 51, ../sass/my.scss */
+.photo .photoWeibo {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-image: url(../img/headerfooterIcon.png);
+  background-position: 0 -1248px;
+  width: 25px;
+  height: 25px;
+}
+/* line 58, ../sass/my.scss */
+.photo .photoQq {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-image: url(../img/headerfooterIcon.png);
+  background-position: 0 -886px;
+  width: 25px;
+  height: 25px;
+}
+
+/* line 66, ../sass/my.scss */
+.contact {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}

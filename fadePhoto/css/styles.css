@@ -1,0 +1,63 @@
+HTML {PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px;}
+BODY {	PADDING-RIGHT: 0px; PADDING-LEFT: 25px; FONT-WEIGHT: normal; FONT-SIZE: 11px; PADDING-BOTTOM: 30px; MARGIN: 0px; COLOR: #aaaaaa; LINE-HEIGHT: 18px; PADDING-TOP: 30px; FONT-FAMILY: 微软雅黑,sans-serif; BACKGROUND-COLOR: #565656; TEXT-ALIGN: left; TEXT-DECORATION: none;}
+.margin_bottom_1 { clear: both; overflow: hidden;width: 100%;height:1px; BORDER-BOTTOM: #ff2a43 0.1em solid;font-size: 1px;}
+#slider {    width: 1200px; /* important to be same as image width */
+    height: 600px; /* important to be same as image height */
+    position: relative; /* important */
+    overflow: hidden; /* important */
+}
+#slider img{  border: 0px;left: 0;  margin-left: 0;}
+#sliderContent {
+    width: 100%; /* important to be same as image width or wider */
+    position: absolute;
+    top: 0;
+    margin-left: 0;
+}
+.sliderImage {
+    float: left;
+    position: relative;
+    display: none;
+    width: 100%;
+    height:600px;
+    left: 0;
+    margin-left: 0;
+}
+.sliderImage img{
+    float: left;
+    position: relative;
+    left: 0;
+    margin-left: 0;
+}
+.sliderImage span {
+    position: absolute;
+    font: 14px 微软雅黑,sans-serif;
+    padding: 1px 9px;
+    width: 1198px;
+    height:58px;
+    line-height: 46px;
+    background-color: #000;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    color: #fff;
+    display: none;
+letter-spacing:0.3mm;
+}
+.clear {
+ clear: both;
+}
+.sliderImage span strong {
+    font-size: 80%;
+}
+.top {
+ top: 0;
+ left: 0;
+}
+.bottom {
+ bottom: 0;
+    left: 0;
+}
+ul {
+ list-style-type: none;
+}

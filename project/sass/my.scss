@@ -1,0 +1,68 @@
+@import "compass/css3";
+
+.round {
+	@include border-radius(4px);
+}
+
+$footer-color : #272727;
+
+#footer{
+	position: relative;
+	// margin-top: -60px;
+	width: 100%;
+	height: 270px;
+	color:#f4f4f4;
+	background-color:#272727;
+	min-width:1024px;
+	.footer-main{
+		width: 100%;
+		background-color: $footer-color;
+		height:240px;
+		color:#D4D4D4;
+	}
+}
+.footer-wrap{
+	width: 1024px;
+	margin:auto;
+}
+.container1{
+	@include inline-block;
+	position:relative;
+	top:78px;
+}
+.container2{
+	p{
+		font-size: 28px;
+		color:#fff;
+	}
+	@include inline-block;
+}
+.w2{
+	s{
+		display: block;
+		background-image: url(../img/headerfooterIcon.png);
+		background-position: 0 -703px; 
+		width: 147px; 
+		height: 41px;
+		margin: 0 auto;
+	}
+}
+.photo{
+	.photoWeibo{
+		@include inline-block;
+		background-image: url(../img/headerfooterIcon.png);
+		background-position: 0 -1248px; 
+		width: 25px; 
+		height: 25px;
+	}
+	.photoQq{
+		@include inline-block;
+		background-image: url(../img/headerfooterIcon.png);
+		background-position: 0 -886px; 
+		width: 25px; 
+		height: 25px;
+	}
+}
+.contact{
+	@include inline-block;
+}

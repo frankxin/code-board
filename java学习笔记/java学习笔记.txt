@@ -1,0 +1,158 @@
+1.java 注释
+
+	//单行注释
+	/*多行注释*/
+	/**
+	*
+	*    文档注释
+	*
+	*/
+
+2.java char
+
+	java用的是Unicode字符集 ，占两个字节
+	C用的是ASCII ， 占一个字节 不能表示中文
+
+3.java 数据类型转换
+	低精度向高精度转换自动完成
+	低向高要强制转换
+
+4.基本输入输出
+	System.out
+	Scanner input = new Scanner(System.in);
+
+5.运算符
+	10%-3 = 1
+	-10%3 = -1
+	看分子的正负
+
+	位运算符
+		负数补码=反码+1
+		反码=除符号位意外所有位去反
+		&与
+		|或
+		x^y异或
+		~x 按位取反 （相当于-x-1）
+		>>右移位 （移一位相当于/2）
+		<<左移位  (移一位相当于x2)
+
+	思考如何不通过中间变量，实现两个整数的交换
+		方法一：x=x+y;y=x-y;x=x-y;
+		方法二：x=x^y; y=x^y; x=x^y;
+		(异或是个神奇的东西x^y=z x，y，z两两异或等于第三个)
+5.java bigInteger的大数操作
+
+6.java 数组
+	动态初始化 int[] arr = new int[10];
+	静态初始化 int[] arr = {1,2,3,4,5,6,7,7};
+	Arrays.sort();可以排数字。。
+	注意java中的数组长度是固定的
+7.用户输入年份和月份打印日历的实现方法
+
+8.字符串的静态初始化与动态初始化
+	String s1 = 'hello';
+	String s2 = 'hello';
+
+	String s3 = new String("hello");
+	String s4 = new String("hello");
+
+	s1 = s2 但是 s3不等于s4
+	当用静态方式初始化时，会储存在字符串常量池中
+	而使用动态方法初始化时，有几个建几个对象
+9.equal()和==的区别
+	equal()是数值相等比较的是内容，==是对象相等，比较的是堆中储存地址是否相同
+
+10.引用传递的是hashCode
+
+11.生成子类对象，先执行父类构造方法，再执行子类构造方法
+
+12.java不允许多根继承，与c++不同，Object是所有类的父类
+
+13.方法重写：@Override 加上最好
+   方法重载：@Overload 方法名字相同参数的个数，类型次序不同
+   都是多态性的表现
+
+14.多态性：指同一种行为在不同对象上的表现是不同的
+
+15.final关键字
+	(1)修饰属性
+		final int NUM = 10;  //常量一般写成大写，
+		或者在构造方法中初始化
+	(2)修饰引用
+		final person p;
+		对象不能变
+	(3)final修饰方法
+		方法不能被重写
+	(4)final类是不能被继承的，不能被扩展
+	(5)final关键字修饰形参
+16.属性没有多态性属性值取决于引用类型
+
+17.super关键字
+	引用父类的属性和方法
+	调用父类构造方法
+18.抽象类无法实体化
+	public abstract class test{}
+	作为抽象类的子类必须实现父类的抽象方法
+	或者本身也是抽象类
+	抽象方法不需要在本类实现  public abstract double getName();
+	然后可以在继承类中实现
+19.接口（interface）
+	public interface mydemo{
+		int num = 100;  //相当于static final
+		void fn(){};   //相当于abstract void fn()
+	}
+	接口是特殊的抽象类
+	类要实现接口要用implements（实现）关键字
+	一个类可以实现多个接口，只能继承一个父类
+20.包，事实上是一个目录结构
+
+21.访问控制
+	同一个类下都可以访问，
+	同一个包内只有private不能访问，
+	同一个包中的子类只有private不能访问，
+	不同包中的子类 D extends A  不能访问A中的protect private 只能通过
+	继承的D的对象来访问A中的protect
+	包外任何子类的类 protect和private都不能访问
+
+22.异常（exception）
+	throwable
+	|       | 
+   error	exception
+
+   try{
+
+   }
+   catch{
+
+   }
+   finally{
+
+   	任何时候都会执行，通常用于释放资源的
+
+   }
+
+23.Object类的常用方法
+	toString();
+		所有的system.out.println()都会调用toString();可以将其重写
+	hashCode();
+
+	equals();
+		重写equal 的同时为什么必须重写hashcode？ 
+        hashCode是编译器为不同对象产生的不同整数，根据equal方法的定义：如果两个对象是相等（equal）的，那么两个对象调用 hashCode必须产生相同的整数结果，即：equal为true，hashCode必须为true，equal为false，hashCode也必须 为false，所以必须重写hashCode来保证与equal同步。 class Student {  int num;  String name; 
+        Student(int num, String name) {   this.num = num;   this.name = name;  } 
+        public int hashCode() { 
+        return num * name.hashCode();  } 
+        public boolean equals(Object o) {   Student s = (Student) o; 
+        return num == s.num && name.equals(s.name);  } 
+        public String toString() {   return num + ":" + name;  } } 
+  
+		在java的集合中，判断两个对象是否相等的规则是：
+		1，判断两个对象的hashCode是否相等     如果不相等，认为两个对象也不相等，完毕     如果相等，转入2 
+		2，判断两个对象用equals运算是否相等     如果不相等，认为两个对象也不相等     如果相等，认为两个对象相等
+	clone();
+
+24.private 的属性要封装？
+	封装了以后
+
+
+
